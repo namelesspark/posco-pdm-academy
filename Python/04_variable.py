@@ -62,3 +62,4 @@ temp = 25  # 온도(섭씨)
 count = 3  # 센서 개수
 
 
+print(type(temp))
