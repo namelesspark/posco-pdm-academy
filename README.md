@@ -1,7 +1,7 @@
 # 🏭 POSCO K-뉴딜 PDM 아카데미
 
-> **[K뉴딜] 설비 고장을 예측하는 AI 데이터 분석** 과정 학습 아카이브 📚
-> 제조 설비 센서 데이터로 **이상 탐지 · 고장 예측 · 잔여수명(RUL)** 까지 배우는 중 🔧
+> **[K뉴딜] 설비 고장을 예측하는 AI 데이터 분석** 과정 학습 아카데미 📚
+> 제조 설비 센서 데이터로 **이상 탐지 · 고장 예측 · 잔여수명(RUL)** 까지 🔧
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
@@ -15,7 +15,7 @@
 
 - 포스코 **K-뉴딜 예지보전(PDM, Predictive Maintenance) 아카데미** 수업 내용 정리하는 레포임
 - 코딩 처음부터 시작 → Python 기초 → 시계열 분석 → **설비 이상 탐지 · 고장 예측** 까지 가는 게 목표 🎯
-- 수업 실습 코드 / 강의 자료 / 복습 노트 전부 여기 모아둠 🗃️
+- 수업 실습 코드(Python, Ipynb) / AI 교과서식 정리 복습 노트 여기 모아둠 🗃️
 - 예제가 죄다 `온도 · 진동 · 압력` 같은 설비 센서 데이터 기반임 (도메인 냄새 폴폴 남 😎)
 
 ## 🎯 과정 정보
@@ -52,35 +52,20 @@ posco-pdm-academy/
 ├── 📓 Ipynb/         # Jupyter 노트북
 │   ├── 2026.07.14 수업.ipynb
 │   └── 월드컵_예측.ipynb      # 연습용 예측 노트북 ⚽
-├── 📚 Lecture/       # 강의 자료 (PDF)
-│   ├── 00_Git.pdf
-│   ├── 01_01_설비데이터와_Python_환경.pdf
-│   ├── 01_02_Python_첫_코드와_오류_읽기.pdf
-│   └── 02_01_변수.pdf
 ├── 🔁 Remind/        # 복습용 자료
 │   └── 파이썬_데이터분석_문법교과서.pdf
-└── 🖼️ *.png / 🔗 *.url    # 실습 캡처 · 참고 링크
+│   └── 파이썬기초_Git첫걸음.pdf
 ```
 
-## 🐍 지금까지 배운 것 (Day 1~2)
+## 🐍 지금까지 배운 것
 
 - **`print()`** — 내장 함수, f-string, `,` vs `+` 출력 차이 📤
 - **산술 연산자** — `+  -  *  /  //  %`, 괄호로 연산 우선순위 지정 🧮
 - **오류 읽기** — `Traceback`은 **맨 아래가 진짜 에러 위치**, `SyntaxError` / `NameError` 구분 🐞
 - **변수** — 선언 · 재할당 · 값 복사 · 다중 할당, `=`는 "같다"가 아니라 **"저장"** 📦
+- ""Github 기초" - git `init`, `status`, `add`, `commit`, `push`, `pull` 👊
 
 > 💡 실습 예제 전부 설비 점검 리포트(`온도 / 진동 / 압력`) 컨셉으로 짬 → 뒤에 센서 데이터 분석으로 자연스럽게 이어짐
-
-## 🚀 실행 방법
-
-```bash
-# 저장소 클론
-git clone https://github.com/namelesspark/posco-pdm-academy.git
-cd posco-pdm-academy
-
-# 파이썬 실습 코드 실행
-python Python/01_print.py
-```
 
 ## 🛠️ 기술 스택
 
@@ -92,7 +77,7 @@ python Python/01_print.py
 
 <div align="center">
 
-✍️ **by [namelesspark](https://github.com/namelesspark)** · 🎓 국립금오공과대학교 컴퓨터공학부
+✍️ **by [namelesspark](https://github.com/namelesspark)** · 🎓 
 
 _설비 고장, 터지기 전에 잡아낸다_ 🔮⚙️
 
