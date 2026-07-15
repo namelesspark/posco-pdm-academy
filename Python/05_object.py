@@ -56,3 +56,17 @@ fake_num = "123"
 # type()을 사용해서 출력된 결과물의 type을 확인할 수 있는 방법
 print(num, ">>>", type(num))
 print(fake_num, ">>>", type(fake_num))
+
+
+print("=== 자료형마다 동작이 다른 것 확인하기 ===")
+
+print("=== 자주 하는 실수 ===")
+print(0.1 + 0.8)  # 0.9
+# 위 상황에서는 출력되지만
+# 가끔 컴퓨터 내부 연산 과정에서 아주 작은 오차가 발생하는 경우도 있음
+
+# 작은 오차 해결법
+print("작은 오차 해결법", round(0.1 + 0.8, 2))
+
+print("str과 int/float는 덧셈이 불가능하다")
+print("print('123' + 456) # TypeError 발생")
