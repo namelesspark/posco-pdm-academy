@@ -1,5 +1,7 @@
 Lecture/
 etc/
+Python\etc.py
+
 # Python
 __pycache__/
 *.py[cod]
