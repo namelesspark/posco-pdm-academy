@@ -8,3 +8,38 @@ print(notice)
 tap = "이름\t상태"
 print(tap)
 print("이름 상태")
+
+# ==================================================
+# 인덱싱 - 위치 번호로 글자를 하나 꺼내기
+# 문자열[인덱스 번호]
+# 문자열의 첫 글자 인덱스는 0
+
+print("\n\n=== 인덱싱 ===")
+word = "PYTHON"
+print(word[0], word[1], word[2])
+
+abc = "abcdefghijklmnopqrstuvwxyz"
+# a0 b1 c2 d3 e4 / f5 g6 h7 i8 j9 / k10 l11 m12 n13-13 o14-12 / p15-11 q16-10 r17-9 s-8 t-7 / u-6 v-5 w-4 x-3 y-2 / z-1
+
+# 자기 이름 출력하기 ( parkminho )
+print(
+    abc[15] + abc[0] + abc[17] + abc[10] + abc[12] + abc[8] + abc[13] + abc[7] + abc[14]
+)
+
+print(
+    abc[-11]
+    + abc[0]
+    + abc[-9]
+    + abc[10]
+    + abc[12]
+    + abc[8]
+    + abc[13]
+    + abc[7]
+    + abc[-12]
+)
+
+# ================================================
+# 슬라이싱이란 - 여러 글자를 구간으로 잘라내기
+# 문자열[시작:끝]
+#
+print(word[1:4])
