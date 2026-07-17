@@ -1,6 +1,7 @@
 Lecture/
 etc/
 Python\etc.py
+COMMIT_CONVENTION.md
 
 # Python
 __pycache__/
