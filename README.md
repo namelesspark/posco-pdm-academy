@@ -32,7 +32,7 @@
 ## 🗺️ 학습 로드맵
 
 - [x] 🐍 **Python 기초** — 출력 · 연산자 · 오류 읽기 · 변수 · 자료형 · 입력/형변환 · 문자열
-- [ ] 📊 데이터 처리 & 기초 통계 · 시각화
+- [ ] 📊 데이터 처리 & 기초 통계 · 시각화 &nbsp;🔄 _Sandbox에서 AI4I 데이터셋 선행 실험 중_
 - [ ] 📈 시계열 데이터 분석 (추세 · 주기 · 변동성)
 - [ ] ⚙️ 제조 설비 · 센서 데이터 / 디지털 트윈 이해
 - [ ] 🚨 이상 탐지(Anomaly Detection) 알고리즘
@@ -65,14 +65,15 @@ posco-pdm-academy/
 │   ├── Git과GitHub_실전.pdf
 │   ├── 자료형과_연산자.pdf
 │   └── 입력_형변환_문자열.pdf
-├── 🧠 STT/               # 강의 음성 STT 기록 보관용 (예정)
-├── 🤖 [LN_02~05]_Lab_*.ipynb # 딥러닝 강의 Lab 노트북 (Colab)
+├── 🧪 Sandbox/           # 실전 데이터 실험 공간 (수업 진도와 별개)
+│   ├── ai4i2020.csv           # AI4I 2020 예지보전 데이터셋 (UCI)
+│   └── machine_learning.ipynb # 데이터셋 직접 분석해보는 노트북
 ├── 📄 README.md              # 이 문서
-├── 🐙 git cheatsheet.md      # Git 자주 쓰는 명령어 정리
-└── 📌 COMMIT_CONVENTION.md   # 이 레포 커밋 메시지 규칙
+└── 🐙 git cheatsheet.md      # Git 자주 쓰는 명령어 정리
 ```
 
-> 🙈 `Lecture/`(강의 PDF 원본), `etc/`(스크린샷)는 `.gitignore` 처
+> 🙈 `Lecture/`(강의 PDF 원본), `etc/`(스크린샷), `Sandbox/predictive-maintenance-ai4i/`(참고용 외부 레포)는
+> `.gitignore` 처리 → 로컬에만 두고 원격에는 안 올림.
 
 ### 📁 디렉토리 역할 한눈에
 
@@ -82,8 +83,7 @@ posco-pdm-academy/
 | `Practice/` | 배운 개념을 **스스로 문제로 풀어본 연습**. 수업 코드와 섞지 않음 | `.py` |
 | `Ipynb/` | 셀 단위 실행이 필요한 **주피터 수업·연습 노트북** | `.ipynb` |
 | `Remind/` | 나중에 다시 보려고 만든 **교과서식 복습 정리본** | `.pdf` |
-| `STT/` | 강의 음성을 텍스트로 옮긴 **STT 기록 보관용** (아직 비어 있음) | (예정) |
-| 루트 `[LN_*]` | 딥러닝 과정 **Colab Lab 노트북** 원본 | `.ipynb` |
+| `Sandbox/` | 수업 진도와 별개로 **실제 설비 데이터셋을 직접 만져보는 실험실** | `.csv` · `.ipynb` |
 
 ## 🐍 지금까지 배운 것
 
