@@ -1,7 +1,10 @@
 Lecture/
 etc/
-Python\etc.py
+Python/etc.py
 COMMIT_CONVENTION.md
+
+# 참고용 외부 레포 (출처: github.com/Edirin-Ako/predictive-maintenance-ai4i, MIT)
+Sandbox/predictive-maintenance-ai4i/
 
 # Python
 __pycache__/
