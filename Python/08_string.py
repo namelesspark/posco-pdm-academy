@@ -181,3 +181,9 @@ print("정 상 가 동".replace(" ", ""))
 # 글자 치환
 print("고장".replace("고장", "fault"))
 print("고장".replace("고", "fault"))
+
+
+# replace() 체이닝
+num = "     010-1234-1234    "
+num = num.replace(" ", "").replace("-", "")
+print(num)
