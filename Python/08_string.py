@@ -1,6 +1,5 @@
 # ==================================================
 # 이스케이프 문자
-#
 
 notice = "설비 점검 안내 \n1.전원 확인\n2. 센서 점검"
 print(notice)
@@ -81,3 +80,28 @@ sqe_index = sqe.find("SQE")
 print(sqe_index)
 
 print(sqe[sqe_index : sqe_index + 3])
+
+
+print("=== Startswith, Endswith ===")
+
+# EQP로 시작하는지 확인해보기
+
+eqp = "EQP-00Q8"
+print("EQP-001".startswith("EQP"))
+print("EQP-001".endswith("001"))
+
+str2 = "월요일입니다. 여러분은 할 수 있어요!"
+print(str2.endswith)
+print(str2.endswith("!"))
+print(str2.endswith("요!"))
+print(str2.endswith(" 월요일입니다. 여러분은 할 수 있어요!"))
+
+
+print("=== 실험 ===")
+ex_1 = "Apple Application Apologize Apply Append"
+print(ex_1.find("Appli"))
+
+
+# ===============================
+print("=== 값은 객체다 ===")
+print(type("잊으면 안됨!"))
