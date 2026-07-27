@@ -187,3 +187,34 @@ print("고장".replace("고", "fault"))
 num = "     010-1234-1234    "
 num = num.replace(" ", "").replace("-", "")
 print(num)
+
+
+# =============================
+# split(): 문자열 자르기, 결과는 "리스트" 자료형.
+# 리스트는 순서가 있다. 왼쪽부터 인덱스 0 자동 생성됨.
+print("=== split() ===")
+s = "a, b, c, d"
+print(s.split(", "))
+
+fruit = "딸기, 거봉, 키위, 사쿠란보"
+print(fruit.split(", "))
+
+fruit_list = fruit.split(", ")
+print(fruit_list[1])
+print(fruit_list[-1])  # 음수 인덱스 작동함!
+print(fruit_list[3])
+
+# split 횟수 제한
+num = "010-1234-1234"
+# ['010', '1234-1234'] 로 자르고 싶을 때?
+print(num.split("-", 1))
+
+# =============================
+# join()
+print("\n=== join ===")
+# 리스트를 하나의 문자열로 합침
+# '구분자'.join(리스트)
+
+print("-".join(fruit_list))
+",".join(fruit_list)
+print(fruit_list)
