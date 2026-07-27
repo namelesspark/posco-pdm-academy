@@ -85,3 +85,12 @@ print("\n=== 실습 7 - 구분자 통째로 바꾸기 ===")
 date = "2026/07/27"
 date_split = date.split("/")  # ['2026', '07', '27']
 print("-".join(date_split))
+
+print("\n=== 실습 8 - CSV 한 줄에서 값 꺼내 정리하기 ===")
+csv = "1, NORMAL, 25.3"
+csv_list = csv.split(",")
+print(csv_list[1].strip().lower())
+
+# 번외
+csv_list = csv.split(", ")
+print(csv_list[1].lower())
