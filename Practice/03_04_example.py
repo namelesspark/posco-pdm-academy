@@ -69,3 +69,19 @@ print(python.replace("t", "T"))
 
 print("\n 방법 3")
 print(python[0] + python[1] + python[2].upper() + python[3] + python[4] + python[5])
+
+# split + join
+print("\n 방법 4")
+print("T".join(python.split("t")))
+
+
+print("\n=== 실습 6 - sep으로 이어 출력하기")
+date_list = ["2026", "07", "27"]
+print(date_list[0], date_list[1], date_list[2], sep="-")
+print("-".join(date_list))
+
+
+print("\n=== 실습 7 - 구분자 통째로 바꾸기 ===")
+date = "2026/07/27"
+date_split = date.split("/")  # ['2026', '07', '27']
+print("-".join(date_split))
