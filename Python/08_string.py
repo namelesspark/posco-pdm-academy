@@ -45,5 +45,39 @@ print(
 print(word[1:4])
 
 
-# 음수 인덱스를 사용하지 ㅏㄶ고 마지막 인덱스 문자를 뽑고 싶을 때
-print(abc[len(abc - 1)])
+# 음수 인덱스를 사용하지 않고 마지막 인덱스 문자를 뽑고 싶을 때
+print(abc[len(abc) - 1])
+
+
+# 특정 문자열의 위치를 반환
+
+email = "jade.lake8852@gmail.com"
+at = email.index("@")
+
+print(email[0:at])
+
+
+# ================================================
+print("=== index() ===")
+
+
+# ================================================
+print("=== count() ===")
+
+# 문자열에서 특정 문자열의 개수 세기
+str = "a, b, c, d, e,a, a"
+
+str_cnt = str.count("a")
+print(str_cnt)
+
+# ,의 개수 세기
+print(str.count(","))
+print(str.count(", "))
+
+
+# SQE-00Q8이라는 설비의 SQE만 뽑아내기
+sqe = "SQE-00Q8"
+sqe_index = sqe.find("SQE")
+print(sqe_index)
+
+print(sqe[sqe_index : sqe_index + 3])
