@@ -110,6 +110,49 @@ print(data.extend(new_data))  # None이 뜸
 print(data)  # [1, 2, 3, 7, 8, 9]
 
 
-# 정리
-# 오늘 꼭 알아야 할 리스트 수정 메서드와 개념
+# 중간 정리
+# 알아야 할 리스트 수정 메서드와 개념
 # append, insert, extend
+
+# ===================================
+print("\n")
+
+# remove()
+machines = ["펌프", "모터", "압축기", "모터"]
+print(machines)
+machines.remove("모터")
+print(machines)
+
+
+import random
+
+# ===================================
+# pop()
+# 인덱스로 특정 요소를 삭제할 때 사용 + 삭제한 인덱스의 값을 반환한다.
+num_list = [random.randint(1, 100) for _ in range(10)]
+poped = num_list.pop(6)
+print("\n", num_list, poped, sep=" / ")
+
+
+# ===================================
+# del -> del은 메서드가 아니다.
+# .을 쓰지 않고, 실행만 된다.
+num_list = [random.randint(1, 100) for _ in range(10)]
+print("\n원본:", num_list)
+del num_list[:]
+print("del [:] 결과:", num_list)
+
+num_list = [random.randint(1, 100) for _ in range(10)]
+print("\n원본:", num_list)
+del num_list[::2]
+print("간격 2:", num_list)
+
+# ===================================
+# sort()
+#
+
+# ===================================
+# reverse == True
+
+# ==================================
+# count(), index()
