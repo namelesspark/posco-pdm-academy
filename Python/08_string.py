@@ -218,3 +218,10 @@ print("\n=== join ===")
 print("-".join(fruit_list))
 ",".join(fruit_list)
 print(fruit_list)
+
+# =============================
+# sep, end
+# sep 속성을 사용하면 구분을 공백이 아닌 특정 문자열로 가능
+print("안녕", "하세", "요", sep="")
+
+print("안녕", "하세", end="요" + "구르트")
