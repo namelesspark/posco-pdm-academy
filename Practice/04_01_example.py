@@ -57,3 +57,32 @@ empty_list = []
 empty_list.append(55), print(empty_list)
 empty_list.insert(0, 92), print(empty_list)
 empty_list.extend([100, 200, 300]), print(empty_list)
+
+import random
+
+print("\n=== 실습 8 - 잘못된 값 제거하기 ===")
+wired_list = [random.randint(20, 30) for _ in range(10)]  # 20~30 사이 정수 10개 할당
+wired_list.insert(random.randint(0, 10), 999)  # 999 랜덤 위치에 삽입
+print("999 할당된 리스트:", wired_list)  # 리스트 출력
+
+print("999 인덱스:", wired_list.index(999))  # 999 인덱스 확인
+if 999 in wired_list:
+    wired_list.remove(999)
+    print("999 제거 리스트:", wired_list)  # 리스트 출력
+    poped = wired_list.pop(7)  # 7번 인덱스 값 pop
+
+del wired_list[0]  # 인덱스 0 값 삭제
+print("꺼낸 값:", poped, " / ", wired_list)
+
+
+print("\n=== 실습 9 - 정렬하고 탐색하기")
+t_list = [random.randint(20, 30) for _ in range(10)]  # 온도 리스트
+t_list.sort(reverse=False)
+print(t_list)
+t_list.sort(reverse=True)
+print(t_list)
+
+target = random.choice(t_list)
+print("고른 수:", target)
+print(f"{target}의 개수:", t_list.count(target))
+print(f"{target}의 인덱스:", t_list.index(target))
