@@ -61,8 +61,55 @@ print(temps[1:2], temps[3:])  # [36] [38]
 # in 연산자로 값의 존재를 참 / 거짓으로 확인
 # temps = [35, 36, 37, 38]
 temps[2] = 999
-print("2번 인덱스 값 변경 결과: " + str(temps[2]))
+print("\n2번 인덱스 값 변경 결과: " + str(temps[2]))
 
 machines = ["펌프", "압축기", "모터"]
 print("펌프" in machines)  # True
 print("펌프" not in machines)  # False
+
+# ===================================
+# append()
+# 리스트 값 추가 method
+# 리스트의 가장 마지막에 값을 추가
+nums = [1, 2, 3, 4, 5]
+nums.append(999)
+print(nums)
+
+new_nums = nums  # 재할당
+
+new_nums.append(111)
+print("\n원본 nums 리스트:", nums)
+print("복사본 new_nums", new_nums)
+# 같은 공간을 가리키는 포인터기 때문에, append는 주소 다음 공간으로 할당하게 된다.
+
+# 때문에 copy()를 사용해야 함.
+new_nums2 = nums.copy()
+new_nums2.append(222)
+print("\n원본 nums 리스트:", nums)
+print("복사본 new_nums2 리스트:", new_nums2)
+
+
+# ===================================
+# insert()
+# 원하는 위치를 지정하여 삽입
+# nums = [1, 2, 3, 4, 5]
+nums.insert(2, 333)
+print("\n")
+print(nums)
+
+# ===================================
+# extend()
+# 리스트 이어 붙이는 메서드
+# 리스트.extend(이어붙일 리스트)
+
+# 중요한 것, extend()는 값을 반환하지 않는다. 때문에 print할 때 extend를 하면?
+data = [1, 2, 3]
+new_data = [7, 8, 9]
+print("\n")
+print(data.extend(new_data))  # None이 뜸
+print(data)  # [1, 2, 3, 7, 8, 9]
+
+
+# 정리
+# 오늘 꼭 알아야 할 리스트 수정 메서드와 개념
+# append, insert, extend

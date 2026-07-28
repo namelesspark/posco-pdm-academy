@@ -50,3 +50,10 @@ except ValueError:
     pass
 
 print(temps_list)
+
+
+print("\n=== 실습 7 - 측정 값 추가하기 ===")
+empty_list = []
+empty_list.append(55), print(empty_list)
+empty_list.insert(0, 92), print(empty_list)
+empty_list.extend([100, 200, 300]), print(empty_list)
