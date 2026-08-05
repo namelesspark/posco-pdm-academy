@@ -66,3 +66,33 @@ for name, value in values.items():
 
     if value > limits.get(name, 0):
         print("경고")
+
+
+location_dict = {
+    "시": [
+        {"이름": "서울특별시", "기초단체": ["종로구", "동구", "마포구"]},
+        {"이름": "대구광역시", "기초단체": ["중구", "수성구", "달서구"]},
+    ],
+    "도": [
+        {"이름": "경기도", "기초단체": ["수원시", "안산시", "안양시"]},
+        {"이름": "경상북도", "기초단체": ["포항시", "경주시", "김천시"]},
+    ],
+}
+
+print(location_dict)
+print("=" * 80)
+print(location_dict["시"])
+print("=" * 80)
+print(location_dict.get("도"))
+print("=" * 80)
+print(location_dict["시"][0])
+print("=" * 80)
+print(location_dict["시"][1])
+print("=" * 80)
+print(location_dict.get("도")[1].get("이름"))
+
+for basic_dict in location_dict.get("도"):
+    print(basic_dict.get("이름"))
+    print(basic_dict.get("기초단체"))
+
+# 시와 도 단위 딕셔너리를 각각 출력하기
