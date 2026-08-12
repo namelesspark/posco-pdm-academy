@@ -49,3 +49,77 @@ print(np_zeros)
 # np.full(n, 값): 값으로 채움
 np_full = np.full(10, 10)
 print(f"np_full(10, 10): {np_full} / np_full.dtype: {np_full.dtype}")
+
+
+# 08.11 numpy 이틀차
+import random
+
+arr_a = np.array([[random.randint(1, 20) for _ in range(5)] for _ in range(3)])
+print(f"arr_a:\n{arr_a}")
+print(arr_a.shape)
+
+rpm = np.array([[random.randint(1000, 5000) for _ in range(10)] for _ in range(5)])
+print(f"rpm = \n {rpm}")
+print("[0], [-1] 결과:\n", rpm[0], "\n", rpm[-1])
+print("[0:5] 결과:\n", rpm[0:5])
+print("[0][2] 결과:\n", rpm[0][2])
+
+# numpy 배열 비교
+# 비교한다라는 것이, bool type을 낸다는 걸 생각해보자
+# 그 값들이 배열로 만들어지게끔 하는데, 왜 그렇게할까? 등호를 사용하여
+# 비교하는 일을 개별적인 배열의 항목들을 꺼내어 차곡차곡 새로운 배열에 TRUE FALSE로 심어볼 수 있다.
+
+compare = np.array([random.randint(0, 100) for _ in range(10)])
+print(f"compare array: {compare}")
+print(compare > 70)
+
+print(compare[compare > 70])
+
+# np.where
+# 조건에 따라 값을 둘 중 하나로 바꾸기 - 조건/참/거짓 ... 세 가지 인자
+print(np.where(compare > 85, 1, 0))  # 85보다 클 때, 1을, 작을 떄 0을 배열로 표현하기
+compare_over = compare[compare > 70]
+compare2 = compare_over[compare < 90]
+print(compare2)
+
+
+# 회전 수와 토크 배열 준비
+import random, numpy as np
+
+rpm = np.array([random.randint(1000, 5000) for _ in range(10)])
+torque = np.array([random.uniform(0, 70) for _ in range(10)]).round(1)
+print(f"rpm 배열:\n", rpm)
+print(f"torque 배열:\n", torque)
+
+# 비교 연산으로 회전 수가 기준을 넘는 조건 생성 -> 3000 이상으로 해보자
+print("\nrpm 3000이상:", rpm[rpm > 3000])
+
+# 다중 조건으로 회전수 과다 또는 토크 과서 위험 시점 필터링
+# rpm[0] 데이터와 torque[0] 데이터는 같은 시기의 상황을 다룬다
+print((rpm > 3000) | (torque < 10))
+
+
+# 1차원 인덱싱 - 번호로 값 꺼내기
+
+# 배열의 인덱스 번호는 파이썬 리스트처럼 0부터 시작
+
+import random
+import numpy as np
+
+temp_rand = np.array([random.uniform(-20, 70) for _ in range(20)]).round(1)
+print(f"온도 np.array: {temp_rand}")
+
+# 첫 번째 내용만
+print("첫 번째 인덱스", temp_rand[0])
+
+# 끝
+print("마지막 인덱스", temp_rand[-1])
+
+
+temp_2d_rand = np.array(
+    [[random.uniform(-20, 70) for _ in range(10)] for _ in range(random.randint(1, 5))]
+).round(1)
+print(f"temp_2d_rand:\n{temp_2d_rand}")
+
+row = len(temp_2d_rand)
+col = len(temp_2d_rand[0])
