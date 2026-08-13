@@ -48,7 +48,7 @@ print("\n=== 실습 5 - csv.writer로 csv 쓰기 ===")
 
 import csv
 
-with open("Data/08_press.csv", "a", encoding="utf-8") as f:
+with open("Data/08_press.csv", "a", encoding="utf-8", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["시각", "설비"])
     writer.writerow(["09:00", "PUMP-01"])
