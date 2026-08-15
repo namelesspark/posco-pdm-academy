@@ -1,0 +1,11 @@
+* text=auto
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.csv   text eol=lf
+*.ipynb text eol=lf
+
+# 아래 두 줄은 절대 개행 변환 금지 (변환되면 파일이 깨짐)
+# .gitattributes 는 줄 끝 인라인 주석을 지원하지 않는다. 주석은 반드시 한 줄 통째로.
+*.pdf binary
+*.zip binary
