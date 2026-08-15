@@ -3,6 +3,13 @@ etc/
 Python/etc.py
 COMMIT_CONVENTION.md
 
+# 코드 쓰고 지우는 개인 스크래치 (메모장 용도)
+Sandbox/연습.py
+
+# 루트에 떨어지는 교과서식 정리 작업본 (최종본은 Remind/ 로 옮겨 커밋)
+/*.docx
+/*.pdf
+
 # 참고용 외부 레포 (출처: github.com/Edirin-Ako/predictive-maintenance-ai4i, MIT)
 Sandbox/predictive-maintenance-ai4i/
 
@@ -60,3 +67,4 @@ htmlcov/
 # Node modules (Next.js, React 등)
 node_modules/
 
+.claude/
