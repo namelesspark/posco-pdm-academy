@@ -85,14 +85,15 @@ print(df_4.tail())
 print(df_4[df_4["품질등급"] == "불량"].head())
 
 print("-" * 50)
-print(f"불량 아닌 것:\n\
-      {df_4[ ~(df_4["품질등급"] == "불량")].head()}")
+not_defective = df_4[~(df_4["품질등급"] == "불량")]
+print("불량 아닌 것:")
+print(not_defective.head())
 
 # 2. isin으로 품질등급이 특정 목록에 속하는 행 추출
 print("-" * 50)
 print(df_4["품질등급"].unique())
-print(df_4[df_4.isin(["양품", "주의"])])
-print(len(df_4[df_4.isin(["양품", "주의"])]))
+print(df_4[df_4["품질등급"].isin(["양품", "주의"])].head())
+print(len(df_4[df_4["품질등급"].isin(["양품", "주의"])]))
 
 # 3. between으로 실린더압력가 지정 범위에 든 행 추출
 print("-" * 50)
@@ -156,5 +157,42 @@ print(f"비스킷두께 정렬 데이터프레임:\n\
 
 # 3. head로 상위 다섯 개만 남겨 샷 확인
 print("-" * 50)
-print(f"샷만 남겨 head로 보기:\n\
-      {df_6_sorted_defective[["샷","비스킷두께"]].head(5)}")
+print("샷만 남겨 head로 보기:")
+print(df_6_sorted_defective[["샷", "비스킷두께"]].head(5))
+
+
+# ====================================================
+# 실습 7 - 이상 의심 설비 리포트
+print("\n=== 실습 7 - 이상 의심 설비 리포트 ===")
+import pandas as pd
+path_7 = os.path.join("data", "13_diecasting_shot.csv")
+# 1. 불러오기
+df_7 = pd.read_csv(path_7, encoding="utf-8")
+
+# 2. 확인하기
+df_7.info()
+
+# 3. 필터링
+df_warning = df_7[(df_7["비스킷두께"] >= 16) | (df_7["사이클타임"] >= 100)]
+print(len(df_warning))  # 76
+# 4. 정렬
+df_report = df_warning.sort_values("비스킷두께", ascending=False)
+print(df_report.head())
+
+# 5. 선택 : [[...]] 대괄호 중첩 주의!!
+df_final = df_report[["샷", "품질등급", "형체력", "사이클타임"]]
+
+print("-------------------")
+print("가장 위험 목록")
+print(df_final.head())
+
+df_danger = df_final.head(1)
+print("가장 위험한 항목")
+print(df_danger)
+
+# · 복합 조건으로 위험 설비를 거르고 비스킷두께 내림차순 정렬
+# · 필요한 주요 열만 선택하고 가장 위험한 설비로 판단 문장 작성
+# · 같은 흐름을 주조 로그 불량 데이터에도 적용해 결과 비교
+
+# 예상 결과
+# 주조 로그 위험 50건·판단 문장, 주조 로그 불량 상위 목록 출력
