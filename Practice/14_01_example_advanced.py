@@ -4,7 +4,7 @@ import os
 ###############################################################################
 # 8/18 종합 실습 Pandas - groupby
 ###############################################################################
-path_advanced = os.path.join("data", "students_groupby_practice.csv")
+path_advanced = os.path.join("Data", "students_groupby_practice.csv")
 df_advanced = pd.read_csv(path_advanced, encoding="utf-8")
 
 print(df_advanced.info())

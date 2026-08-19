@@ -165,7 +165,7 @@ print(df_6_sorted_defective[["샷", "비스킷두께"]].head(5))
 # 실습 7 - 이상 의심 설비 리포트
 print("\n=== 실습 7 - 이상 의심 설비 리포트 ===")
 import pandas as pd
-path_7 = os.path.join("data", "13_diecasting_shot.csv")
+path_7 = os.path.join("Data", "13_diecasting_shot.csv")
 # 1. 불러오기
 df_7 = pd.read_csv(path_7, encoding="utf-8")
 
