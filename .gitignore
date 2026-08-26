@@ -68,3 +68,6 @@ htmlcov/
 node_modules/
 
 .claude/
+
+# 실습 노트북에서 savefig 로 떨어지는 그래프 이미지 (노트북 출력에 이미 들어있음)
+Practice/*.png
