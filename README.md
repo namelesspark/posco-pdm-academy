@@ -47,6 +47,28 @@
 
 ```text
 posco-pdm-academy/
+├── 01_Python_Data_Analysis/   7~8월 Python · 데이터 분석 과정
+│   ├── Lecture/
+│   ├── Python/
+│   ├── Practice/
+│   ├── Data/
+│   ├── Ipynb/
+│   └── Remind/
+├── 02_Steel_Process/          8월 31일부터 시작한 철강 공정 과정
+│   ├── Lecture/
+│   ├── Practice/
+│   ├── Data/
+│   └── Ipynb/
+├── Sandbox/                   과정 공통 실험 공간
+└── etc/                       과정 공통 기타 자료
+```
+
+과정 번호가 다시 `01-01`부터 시작하므로 과정별 상위 디렉터리에서 교안 번호를 독립적으로 관리한다.
+
+### 01_Python_Data_Analysis 상세 구조
+
+```text
+01_Python_Data_Analysis/
 ├── Python/                   교안 설명 코드 · 개념 1개 = 파일 1개
 │   ├── 01_print.py
 │   ├── 02_operator.py
@@ -159,20 +181,6 @@ posco-pdm-academy/
 │   ├── 데이터프레임_탐색과_선택.pdf
 │   ├── 조건_필터링과_정렬.pdf
 │   └── 빈도와_그룹_집계.pdf
-├── Sandbox/                  수업 진도와 별개 실험 공간
-│   ├── ai4i2020.csv
-│   ├── machine_learning.ipynb
-│   ├── 별찍기.py
-│   ├── 코테.py
-│   └── ai_challenge/           디렉토리 이름 = 커버하는 교안 범위
-│       ├── README.md
-│       ├── 01_02-04_01/
-│       ├── 04_02-05_01/
-│       └── 05_02-07_03/
-├── README.md
-├── git cheatsheet.md
-├── .gitignore
-└── .gitattributes            개행(LF) 통일 · pdf/zip 바이너리 지정
 ```
 
 > `Python/22` 는 내용이 `21_numpy.py` 로 통합되어 번호만 비어 있음
@@ -180,12 +188,12 @@ posco-pdm-academy/
 로컬 전용 · 원격 제외 (`.gitignore`)
 
 ```
-Lecture/                          강의 교안 원본 (저작권)
+*/Lecture/                        강의 교안 원본 (저작권)
 etc/                              스크린샷
-Python/etc.py                     슬라이싱 심화 낙서
+01_Python_Data_Analysis/Python/etc.py  슬라이싱 심화 낙서
 COMMIT_CONVENTION.md              커밋 메시지 규칙 (개인 메모)
 Sandbox/연습.py                    코드 쓰고 지우는 개인 스크래치
-/*.docx  /*.pdf                   루트에 떨어지는 정리본 작업파일 (최종본만 Remind/ 로)
+/*.docx  /*.pdf                   루트에 떨어지는 정리본 작업파일
 .claude/                          Claude Code 로컬 설정
 Sandbox/predictive-maintenance-ai4i/   참고용 외부 레포 (MIT)
 ```
@@ -194,11 +202,11 @@ Sandbox/predictive-maintenance-ai4i/   참고용 외부 레포 (MIT)
 
 | 디렉토리 | 역할 | 파일 |
 | --- | --- | --- |
-| `Python/` | 교수님이 교안 설명하며 친 코드를 따라 적은 것 | `.py` |
-| `Practice/` | 교안 실습 · 스스로 푼 연습 문제 | `.py` |
-| `Data/` | 실습에서 읽어 쓰는 데이터 | `.csv` · `.txt` |
-| `Ipynb/` | 셀 단위 실행이 필요한 수업 · 연습 노트북 | `.ipynb` |
-| `Remind/` | 나중에 다시 보려고 만든 교과서식 정리본 | `.pdf` |
+| `*/Python/` | 교수님이 교안 설명하며 친 코드를 따라 적은 것 | `.py` |
+| `*/Practice/` | 교안 실습 · 스스로 푼 연습 문제 | `.py` · `.ipynb` |
+| `*/Data/` | 실습에서 읽어 쓰는 데이터 | `.csv` · `.txt` |
+| `*/Ipynb/` | 주제별로 정리한 수업 노트북 | `.ipynb` |
+| `*/Remind/` | 나중에 다시 보려고 만든 교과서식 정리본 | `.pdf` |
 | `Sandbox/` | 진도와 별개로 데이터셋을 직접 만져보는 실험실 | `.csv` · `.ipynb` · `.py` |
 
 ### ⌗ 네이밍 규칙
