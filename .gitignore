@@ -76,3 +76,6 @@ node_modules/
 outputs/
 tmp_*/
 steel-process-*.html
+
+# README 에 싣는 이미지는 예외
+!02_Steel_Process/assets/*.png
