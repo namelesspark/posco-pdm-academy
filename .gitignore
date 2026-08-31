@@ -1,6 +1,6 @@
 Lecture/
 etc/
-Python/etc.py
+01_Python_Data_Analysis/Python/etc.py
 COMMIT_CONVENTION.md
 
 # 코드 쓰고 지우는 개인 스크래치 (메모장 용도)
@@ -71,3 +71,8 @@ node_modules/
 
 # 실습 노트북에서 savefig 로 떨어지는 그래프 이미지 (노트북 출력에 이미 들어있음)
 *.png
+# 작업 산출물 / 임시 폴더
+**/*.docx
+outputs/
+tmp_*/
+steel-process-*.html
