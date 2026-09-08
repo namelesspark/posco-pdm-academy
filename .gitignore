@@ -79,3 +79,7 @@ steel-process-*.html
 
 # README 에 싣는 이미지는 예외
 !02_Steel_Process/assets/*.png
+_workspace
+_work_*/
+**/build_*_textbook_notes.cjs
+**/*_assets/
