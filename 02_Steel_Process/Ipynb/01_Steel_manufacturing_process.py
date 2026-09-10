@@ -53,7 +53,7 @@ print(MEASER_KR.get("PRS", "미등록"))
 
 import pandas as pd
 
-df = pd.read_csv("data/01-01_철강_공정_개관_설비태그.csv")
+df = pd.read_csv("Data/01-01_철강_공정_개관_설비태그.csv")
 
 # (행 개수, 열 개수) 값을 알고 싶음
 print(df.shape)  # (24,4)
@@ -259,7 +259,7 @@ print(df.groupby("process_kr").size())
 # CASE B : 계측 항목별로 묶어 가장 많은 물리량 확인
 import pandas as pd
 
-df = pd.read_csv("data/01-01_철강_공정_개관_설비태그.csv")
+df = pd.read_csv("Data/01-01_철강_공정_개관_설비태그.csv")
 
 PROCESS_KR = {
     "SNT": "소결",
