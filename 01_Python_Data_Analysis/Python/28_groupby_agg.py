@@ -8,7 +8,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('data/14_hydraulic.csv', encoding = 'utf-8')
+df = pd.read_csv('Data/14_hydraulic.csv', encoding = 'utf-8')
 
 # 전체 평균 온도
 print(df['온도'].mean().round(3)) # 45.339
@@ -59,7 +59,7 @@ print(df.groupby('냉각기상태')['온도'].median().round(3))
 
 import pandas as pd
 
-df = pd.read_csv('data/14_hydraulic.csv', encoding = 'utf-8')
+df = pd.read_csv('Data/14_hydraulic.csv', encoding = 'utf-8')
 
 # agg : aggregate (집계하다)
 

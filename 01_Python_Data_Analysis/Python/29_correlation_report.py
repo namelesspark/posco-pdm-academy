@@ -7,7 +7,7 @@
 ###############################################################################
 
 import pandas as pd
-df = pd.read_csv('data/14_hydraulic.csv', encoding = 'utf-8')
+df = pd.read_csv('Data/14_hydraulic.csv', encoding = 'utf-8')
 
 # corr 한 줄로 계산하는 상관계수 : correlation
 cor1 = df['온도'].corr(df['진동'])
@@ -35,7 +35,7 @@ print(num.corr().round(3))
 
 import pandas as pd
 
-df_qc = pd.read_csv('data/14_hydraulic_qc.csv', encoding='utf-8')
+df_qc = pd.read_csv('Data/14_hydraulic_qc.csv', encoding='utf-8')
 df_qc.info()
 
 r1 = df_qc['지표07'].corr(df_qc['지표08'])

@@ -72,7 +72,7 @@ print(band.value_counts())
 import pandas as pd
 
 # 어제까지 배운 groupby 다시 살펴보기
-df = pd.read_csv('data/14_hydraulic.csv', encoding='utf-8')
+df = pd.read_csv('Data/14_hydraulic.csv', encoding='utf-8')
 
 # groupby로 냉각기상태마다 평균 온도 - 소숫점이하 2자리
 print(df.groupby('냉각기상태')['온도'].mean().round(2))
