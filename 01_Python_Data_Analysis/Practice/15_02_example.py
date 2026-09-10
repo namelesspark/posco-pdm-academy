@@ -10,7 +10,7 @@ import os
 
 import pandas as pd
 
-df = pd.read_csv('data/15_01_사출성형_공정.csv', encoding='utf-8', na_values=[-999, 999])
+df = pd.read_csv('Data/15_01_사출성형_공정.csv', encoding='utf-8', na_values=[-999, 999])
 
 print(df.shape) # (250, 22)
 
@@ -29,7 +29,7 @@ print(clean2.shape) # (250, 10) -> 절반 이상의 컬럼 삭제
 
 import pandas as pd
 
-df = pd.read_csv('data/15_02_사출성형_공정.csv', encoding='utf-8')
+df = pd.read_csv('Data/15_02_사출성형_공정.csv', encoding='utf-8')
 df.info()
 
 # 실습 1. dropna로 행·열 삭제

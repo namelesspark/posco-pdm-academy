@@ -10,7 +10,7 @@ import pandas as pd
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 print(df.head(3))
 
 # 실린더압력 컬럼의 IQR 활용
@@ -35,7 +35,7 @@ print(f"하한선: {lower}, 상한선: {upper}")
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 print(df.head(3))
 
 # 사이클타임 컬럼의 IQR 활용
@@ -72,7 +72,7 @@ print(df[mask_ok].shape) # (182, 7) : 이 경우는 결측치는 제외함
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 print(df.head(3))
 
 
@@ -125,7 +125,7 @@ print(s_fixed.mean()) # 26.802970297029702
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 print(df.head(3))
 
 
@@ -157,8 +157,8 @@ print(len(df.drop_duplicates(subset = ['샷', '실린더압력', '주조압력']
 
 import pandas as pd
 
-CD = 'data/16_diecasting.csv'
-WD = 'data/16_welding.csv'
+CD = 'Data/16_diecasting.csv'
+WD = 'Data/16_welding.csv'
 
 df = pd.read_csv(CD)
 
@@ -263,8 +263,8 @@ print(round(보정.mean(), 2)) # 28.28
 
 import pandas as pd
 
-CD = 'data/16_diecasting.csv'
-WD = 'data/16_welding.csv'
+CD = 'Data/16_diecasting.csv'
+WD = 'Data/16_welding.csv'
 
 df = pd.read_csv(CD)
 
@@ -482,7 +482,7 @@ wf = wf.drop_duplicates().reset_index(drop=True)
 print(len(wf)) # 158
 
 # · 정제한 데이터를 파일로 저장
-wf.to_csv('data/16_welding_cleaned.csv', index=False)
+wf.to_csv('Data/16_welding_cleaned.csv', index=False)
 
 # 예상 결과
 # 용접 통전전류 이상치 24건(14.8%), 보정·중복 제거 후 저장

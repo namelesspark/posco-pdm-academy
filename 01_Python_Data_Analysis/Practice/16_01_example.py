@@ -10,7 +10,7 @@ import pandas as pd
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 print(df.head(3))
 #    샷  실린더압력    주조압력  사이클타임  비스킷두께    형체력  상태
 # 0  1  214.0  1037.0   20.7   10.0  258.0   0
@@ -41,7 +41,7 @@ print(range) # 157.0
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 
 # 실습 3. 정렬해서 이상치 후보 찾기
 # 정렬로 동떨어진 사이클타임을 눈으로 찾아 분류
@@ -67,7 +67,7 @@ print(s_sorted.head()) # 6170.0, 652.3  발견!
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 
 # 실습 4. 평균·중앙값으로 이상치 영향 확인
 # 이상치가 평균을 끌어당기는 정도를 중앙값과 비교
@@ -96,7 +96,7 @@ print(df_ok['사이클타임'].mean().round(2)) # 27.67
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 
 # 실습 5. quantile로 Q1·Q2·Q3
 # 실린더압력의 사분위수를 구하고 Q2와 중앙값 일치 확인
@@ -123,7 +123,7 @@ print(df['실린더압력'].quantile(0.75)) # 265.0
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 
 # 실습 6. describe로 격차 큰 컬럼 찾기
 # describe 표에서 평균-중앙값 격차 큰 이상치 의심 컬럼 찾기
@@ -158,7 +158,7 @@ print(report.sort_values('격차', ascending = False)[['mean', '50%', 'max', '�
 
 import pandas as pd
 
-df = pd.read_csv('data/16_diecasting.csv', encoding='utf-8')
+df = pd.read_csv('Data/16_diecasting.csv', encoding='utf-8')
 
 # 실습 7. 여러 컬럼의 가운데 절반 폭 비교
 # 세 컬럼의 Q3~Q1을 비교해 안정·의심 컬럼 구분 : Q1, Q2, Q3
